@@ -55,8 +55,30 @@ class LoginScreen extends StatelessWidget {
                         color: Colors.white),
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
+                Padding(
+                  padding: const EdgeInsets.all(15),
+                  child: Row(
+                    children: const [
+                      Expanded(
+                        child: Divider(
+                          color: Colors.black38,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text("or"),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                        child: Divider(
+                          color: Colors.black38,
+                          height: 10,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
                   width: double.infinity,
