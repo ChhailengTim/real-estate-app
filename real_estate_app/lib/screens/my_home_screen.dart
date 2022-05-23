@@ -14,7 +14,7 @@ class MyHome extends StatelessWidget {
             Container(
               color: Colors.white,
               width: double.infinity,
-              height: 180,
+              height: 200,
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Column(
@@ -24,20 +24,31 @@ class MyHome extends StatelessWidget {
                       Icons.home,
                       size: 50,
                     ),
-                    const Text("Do you own a home?"),
-                    const Text("Track your home's value and nearby sales."),
+                    Text(
+                      "Do you own a home?",
+                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                            fontSize: 20,
+                          ),
+                    ),
+                    Text(
+                      "Track your home's value and nearby sales.",
+                      style: Theme.of(context).textTheme.bodyLarge,
+                    ),
                     Container(
                       // color: ,
                       width: double.infinity,
-                      height: 25,
+                      height: 30,
                       decoration: const BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.zero,
                       ),
-                      child: const Center(
+                      child: Center(
                         child: Text(
                           "See my home estimate",
-                          style: TextStyle(color: Colors.white),
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge!
+                              .copyWith(fontSize: 15, color: Colors.white),
                         ),
                       ),
                     ),
@@ -58,18 +69,32 @@ class MyHome extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text("Ready to Sell?"),
-                      const Text("Pay a 1% listing when you sell and buy."),
+                      Text(
+                        "Ready to Sell?",
+                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                              fontSize: 20,
+                            ),
+                      ),
+                      Text(
+                        "Pay a 1% listing when you sell and buy.",
+                        style: Theme.of(context).textTheme.bodyLarge,
+                      ),
                       Container(
                         // color: ,
                         width: double.infinity,
-                        height: 25,
+                        height: 30,
                         decoration: const BoxDecoration(
                           color: Colors.black26,
                           borderRadius: BorderRadius.zero,
                         ),
-                        child: const Center(
-                          child: Text("Explore selling with Redfin"),
+                        child: Center(
+                          child: Text(
+                            "Explore selling with Redfin",
+                            style:
+                                Theme.of(context).textTheme.bodyLarge!.copyWith(
+                                      fontSize: 15,
+                                    ),
+                          ),
                         ),
                       ),
                     ],

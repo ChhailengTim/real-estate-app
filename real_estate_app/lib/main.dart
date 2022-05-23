@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/my_home_screen.dart';
+import 'screens/favorites_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: MyHome(),
+        body: FavoriteScreen(),
       ),
     );
   }
