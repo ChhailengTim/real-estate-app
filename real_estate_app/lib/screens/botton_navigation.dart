@@ -19,7 +19,7 @@ class _BottomBarState extends State<BottomBar> {
             },
             child: const NavigationDestination(
               icon: Icon(Icons.search),
-              label: "Home",
+              label: "Find Homes",
             ),
           ),
           const NavigationDestination(
