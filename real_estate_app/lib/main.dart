@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:real_estate_app/screens/botton_navigation.dart';
+
+import 'screens/my_home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: BottomBar(),
+        body: MyHome(),
       ),
     );
   }
