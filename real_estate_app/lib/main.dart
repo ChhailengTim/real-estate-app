@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'screens/feed_screen.dart';
+import 'package:real_estate_app/screens/feed_screen.dart';
 
 void main() {
   runApp(const MyApp());
