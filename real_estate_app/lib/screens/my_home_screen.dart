@@ -58,8 +58,8 @@ class MyHome extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text("Do you own a home?"),
-                      const Text("Track your home's value and nearby sales."),
+                      const Text("Ready to Sell?"),
+                      const Text("Pay a 1% listing when you sell and buy."),
                       Container(
                         // color: ,
                         width: double.infinity,
@@ -69,7 +69,7 @@ class MyHome extends StatelessWidget {
                           borderRadius: BorderRadius.zero,
                         ),
                         child: const Center(
-                          child: Text("See my home estimate"),
+                          child: Text("Explore selling with Redfin"),
                         ),
                       ),
                     ],
