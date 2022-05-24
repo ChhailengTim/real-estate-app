@@ -33,7 +33,10 @@ class FeedScreen extends StatelessWidget {
                       // borderRadius: BorderRadius.circular(5),
                       shape: BoxShape.circle,
                     ),
-                    child: const Icon(Icons.place),
+                    child: const Icon(
+                      Icons.place,
+                      color: Colors.white,
+                    ),
                   ),
                 ],
               ),
@@ -128,15 +131,23 @@ class FeedScreen extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              Column(
-                children: const [
-                  Icon(
-                    Icons.home,
-                    size: 50,
+              Stack(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Icon(
+                        Icons.home,
+                        size: 80,
+                      ),
+                      Text(
+                        "Welcome to your feed",
+                        style: Theme.of(context).textTheme.titleLarge,
+                      ),
+                      const Text(
+                          "We'll recommend new homes like the ones you click and favorite.")
+                    ],
                   ),
-                  Text("Welcome to your feed"),
-                  Text(
-                      "We'll recommend new homes like the ones you click and favorite.")
                 ],
               ),
               Container(
