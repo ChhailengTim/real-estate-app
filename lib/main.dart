@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:real_estate_app/screens/feed_screen.dart';
+
+import 'profile_screen.dart/open_house_schedule_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: FeedScreen(),
+        body: OpenHouseScheduleScreen(),
       ),
     );
   }
