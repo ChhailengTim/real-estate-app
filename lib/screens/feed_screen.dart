@@ -104,7 +104,7 @@ class FeedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black12,
+      backgroundColor: Colors.white10,
       appBar: AppBar(
         title: const Text("Feed"),
         actions: [
@@ -134,18 +134,27 @@ class FeedScreen extends StatelessWidget {
               Stack(
                 children: [
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Icon(
-                        Icons.home,
-                        size: 80,
+                      Container(
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Icon(
+                              Icons.home,
+                              size: 80,
+                            ),
+                            Text(
+                              "Welcome to your feed",
+                              style: Theme.of(context).textTheme.titleLarge,
+                            ),
+                            const Text(
+                                "We'll recommend new homes like the ones you click and favorite.")
+                          ],
+                        ),
                       ),
-                      Text(
-                        "Welcome to your feed",
-                        style: Theme.of(context).textTheme.titleLarge,
-                      ),
-                      const Text(
-                          "We'll recommend new homes like the ones you click and favorite.")
                     ],
                   ),
                 ],
