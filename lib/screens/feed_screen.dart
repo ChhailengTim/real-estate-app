@@ -3,6 +3,100 @@ import 'package:flutter/material.dart';
 class FeedScreen extends StatelessWidget {
   const FeedScreen({super.key});
 
+  Widget AddOn(
+    BuildContext context, {
+    String? hot,
+    String? price,
+    String? bed,
+    String? bath,
+    String? sq,
+    String? address,
+    String? lister,
+  }) {
+    return Container(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 200,
+                color: Colors.amber,
+                child: Stack(
+                  alignment: Alignment.bottomRight,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.all(5.0),
+                      padding: const EdgeInsets.all(20.0),
+                      decoration: const BoxDecoration(
+                        color: Colors.black54,
+                        // borderRadius: BorderRadius.circular(5),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(Icons.place),
+                    ),
+                  ],
+                ),
+              ),
+              Stack(
+                alignment: Alignment.bottomLeft,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.all(5.0),
+                    padding: const EdgeInsets.all(8.0),
+                    decoration: BoxDecoration(
+                      color: Colors.orange,
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: Text(hot ?? ""),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: 80,
+            color: Colors.white,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Text(price ?? ""),
+                    const Spacer(),
+                    const Icon(Icons.arrow_upward),
+                    const Icon(Icons.favorite_border),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Text(
+                      bed ?? "Bed",
+                    ),
+                    Text(
+                      bath ?? "Baths",
+                    ),
+                    Text(
+                      sq ?? ("Sq.Ft"),
+                    ),
+                  ],
+                ),
+                Text(
+                  address ?? "",
+                ),
+                Text(
+                  lister ?? "Listing provide by $lister",
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,65 +121,55 @@ class FeedScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "Popular homes in Seattle",
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: 200,
-            color: Colors.amber,
-            child: Container(
-              alignment: Alignment.bottomRight,
-              margin: const EdgeInsets.all(60),
-              decoration: const BoxDecoration(
-                color: Colors.black26,
-                shape: BoxShape.circle,
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Container(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Popular homes in Seattle",
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
               ),
-              child: const Icon(Icons.place),
-            ),
+              AddOn(
+                context,
+                hot: "HOT HOME",
+                price: "\$ 180,000",
+                bed: "4 Bed",
+                bath: " 5 Baths",
+                sq: " 45 Sq.Ft",
+                lister: "Listing by kim",
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              AddOn(
+                context,
+                hot: "HOT HOME",
+                price: "\$ 180,000",
+                bed: "4 Bed",
+                bath: " 5 Baths",
+                sq: " 45 Sq.Ft",
+                lister: "Listing by kim",
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              AddOn(
+                context,
+                hot: "HOT HOME",
+                price: "\$ 180,000",
+                bed: "4 Bed",
+                bath: " 5 Baths",
+                sq: " 45 Sq.Ft",
+                lister: "Listing by kim",
+              ),
+            ],
           ),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: 80,
-            color: Colors.white,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: const [
-                    Text("850,000"),
-                    Spacer(),
-                    Icon(Icons.arrow_upward),
-                    Icon(Icons.favorite_border),
-                  ],
-                ),
-                Row(
-                  children: const [
-                    Text(
-                      "4 Bed",
-                    ),
-                    Text(
-                      "3 Baths",
-                    ),
-                    Text(
-                      "1,610 Sq.Ft",
-                    ),
-                  ],
-                ),
-                const Text(
-                  "13772 27th Ave NE, Seattle, WA 98125",
-                ),
-                const Text(
-                  "Listing provide by NWMLS",
-                ),
-              ],
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
