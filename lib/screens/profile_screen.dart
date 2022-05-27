@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
-  Widget CustomTile({String? text, IconData? icon}) {
+  Widget customTile({String? text, IconData? icon}) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       width: double.infinity,
@@ -101,42 +101,42 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              CustomTile(
+              customTile(
                 icon: Icons.park,
                 text: "Open House Schedule",
               ),
               const Divider(height: 2),
-              CustomTile(
+              customTile(
                 icon: Icons.remove_red_eye,
                 text: "Recently Viewed",
               ),
               const Divider(height: 2),
-              CustomTile(
+              customTile(
                 icon: Icons.manage_search,
                 text: "Open House Schedule",
               ),
               const Divider(height: 2),
-              CustomTile(
+              customTile(
                 icon: Icons.sell,
                 text: "Sell Your Home",
               ),
               const Divider(height: 2),
-              CustomTile(
+              customTile(
                 icon: Icons.badge,
                 text: "Careers",
               ),
               const Divider(height: 2),
-              CustomTile(
+              customTile(
                 icon: Icons.class_outlined,
                 text: "Classes and Events",
               ),
               const Divider(height: 2),
-              CustomTile(
+              customTile(
                 icon: Icons.settings,
                 text: "Settings",
               ),
               const Divider(height: 2),
-              CustomTile(
+              customTile(
                 icon: Icons.flag,
                 text: "Get Help",
               ),
