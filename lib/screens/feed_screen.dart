@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class FeedScreen extends StatelessWidget {
   const FeedScreen({super.key});
 
-  Widget AddOn(
+  Widget addOn(
     BuildContext context, {
     String? hot,
     String? price,
@@ -166,7 +166,7 @@ class FeedScreen extends StatelessWidget {
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
               ),
-              AddOn(
+              addOn(
                 context,
                 hot: "HOT HOME",
                 price: "\$ 180,000",
@@ -178,7 +178,7 @@ class FeedScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              AddOn(
+              addOn(
                 context,
                 hot: "HOT HOME",
                 price: "\$ 180,000",
@@ -190,7 +190,7 @@ class FeedScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              AddOn(
+              addOn(
                 context,
                 hot: "HOT HOME",
                 price: "\$ 180,000",
