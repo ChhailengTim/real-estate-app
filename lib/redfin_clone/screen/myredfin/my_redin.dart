@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate_app/redfin_clone/screen/settings/setting_screen.dart';
 
 class MyRedFin extends StatelessWidget {
   const MyRedFin({Key? key}) : super(key: key);
